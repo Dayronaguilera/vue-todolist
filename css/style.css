@@ -1,0 +1,36 @@
+.col-4 img{
+    width: 100%;
+}
+#newTaskElement{
+    width: 100%;
+    border-radius: 10px;
+}
+.input-task button{
+    width: calc(100% - 10px);
+    margin-left: 10px;
+    border-radius: 10px;
+}
+.list-contanier{
+    list-style: none;
+    background-color:rgba(161, 161, 161, 0.1);
+    border-radius: 15px;
+}
+.list-contanier li{
+    border-bottom: 1px rgb(172, 171, 171) solid;
+    padding: 15px 0px 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.list-contanier li:first-child{
+    margin-top: 30px;
+}
+.list-contanier li:last-child{
+    margin-bottom: 50px;
+}
+.list-contanier li i{
+    padding-right: 20px;
+}
+.list-contanier li span{
+    font-size: 20px;
+}

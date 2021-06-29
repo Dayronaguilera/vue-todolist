@@ -18,17 +18,37 @@
 <body>
 
     <!-- collegamento con vue.js -->
-    <div id="app">
+    <div id="app" class="container">
+        <div class="row justify-content-center mt-5">
+            <div class="col-4">
+                <img src="./img/logo.png" alt="">
+            </div>
+        </div>
 
-        <input id="newTaskElement" v-model="newTask" placeholder="Inserisci le cose da fare">
-        <button @click="addTask">Aggiungi</button>
+        <div class="row justify-content-center input-task mt-4">
+            <div class="col-4 p-0">
 
-        <ul>
-            <li v-for="(todo,index) in todoList">
-                {{todo}} <i @click="deleteTask(index)"  class="fas fa-backspace"></i>
+                <input 
+                id="newTaskElement" 
+                v-model="newTask" 
+                @keyup.enter="addTask" 
+                class="form-control"
+                placeholder="Inserisci le cose da fare">
 
-            </li>
-        </ul>
+            </div>
+            <div class="col-1 p-0">
+                <button class="btn btn-outline-dark" @click="addTask">Aggiungi</button>
+            </div>    
+        </div> 
+        
+        <div class="row justify-content-center">
+            <ul class="col-8 list-contanier mt-5">
+                <li v-for="(todo,index) in todoList">
+                   <span> {{todo}}</span> 
+                   <i @click="deleteTask(index)"  class="fas fa-eraser"></i>
+                </li>
+            </ul>
+        </div>    
     </div>
     
     <!-- link javascript -->
